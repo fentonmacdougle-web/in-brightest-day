@@ -4,10 +4,7 @@ plugins {
 }
 
 repositories {
-	mavenCentral()
-	maven {
-		name = "RedlanceMinecraft"
-		url = uri("https://repo.redlance.org/public")
+	
 	}
 	maven {
 		name = "Gegy"
