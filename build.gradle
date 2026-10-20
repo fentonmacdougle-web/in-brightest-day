@@ -45,13 +45,10 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	implementation("com.zigythebird.playeranim:PlayerAnimationLibFabric:${project.pal_version}")
+	implementation fileTree(dir: 'libs', include: '*.jar')
+compileOnly fileTree(dir: 'libs/jei', include: '*.jar')
 	compileOnly("dev.lambdaurora.lambdynamiclights:lambdynamiclights-api:${project.lambdynamiclights_version}")
 	implementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
-	implementation "me.fzzyhmstrs:fzzy_config:${project.fzzy_config_version}"
-	compileOnly "mezz.jei:jei-${project.minecraft_version}-common-api:${project.jei_version}"
-	compileOnly "mezz.jei:jei-${project.minecraft_version}-fabric-api:${project.jei_version}"
-	localRuntime "mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}"
 	compileOnly "de.maxhenkel.voicechat:voicechat-api:${project.voicechat_api_version}"
 	implementation("com.alphacephei:vosk:${project.vosk_version}") {
 		exclude group: "net.java.dev.jna"
